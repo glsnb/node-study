@@ -11,6 +11,7 @@ class KKB {
 
             // 创建上下文
             const ctx = this.createContext(req, res)
+            // 中间件合成
             const fn = this.compose(this.middlewares)
             await fn(ctx)
             // this.callback(req,res)
