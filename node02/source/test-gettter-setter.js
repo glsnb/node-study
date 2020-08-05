@@ -9,6 +9,8 @@ const kaikeba = {
     }
 }
 
+// 使复杂的过程进行封装，使其优雅起来
+// kaikeba.info.name => kaikeba.name
 console.log(kaikeba.name)
 kaikeba.name = 'kaikeba'
 console.log(kaikeba.name)

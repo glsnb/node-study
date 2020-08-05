@@ -13,7 +13,7 @@
 // }
 
 
-// const fn = compose(add, square)
+// const fn = compose(add, square, square)
 
 // // const fn = (x, y) => square(add(x, y))
 // console.log(fn(1, 2))
@@ -28,6 +28,7 @@ function compose(middlewares){
                 return Promise.resolve()
             }
             return Promise.resolve(
+                // next下一个函数的执行承诺
                 fn(function next(){
                     return dispatch(i + 1)
                 })
